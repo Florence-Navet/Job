@@ -1,0 +1,26 @@
+body {
+        background-color: #88c1d0;
+    }
+    
+    /* ***************MEDIA QUERIES**************** */
+    
+    /* Pour les écrans dont la résolution est comprise entre 1280px et 1680px */
+    @media only screen and (min-width: 1280px) and (max-width: 1680px) {
+        body {
+            background-color: #ffca4b;
+        }
+    }
+/* Pour les écrans dont la résolution est comprise entre 1280px et 1680px */
+@media only screen and (min-width: 1280px) and (max-width: 1680px) {
+        body {
+                background-color: #275fa0;    
+        }
+}
+/* Pour les écrans dont la résolution est inférieure à 1280px */
+@media only screen and (max-width: 1279px) {
+        body {
+                background-color: #ffffff;    
+        } 
+}
+
+    

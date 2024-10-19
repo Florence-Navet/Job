@@ -1,0 +1,9 @@
+/* Pour les écrans dont la résolution est inférieure à 1280px */
+@media only screen and (max-width: 1279px) {
+        /* Modifie la couleur de fond */
+        body {
+         /* Modifie la couleur de fond */
+          background-color: #ffffff;
+        }
+}
+      

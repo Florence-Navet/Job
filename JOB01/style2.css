@@ -1,0 +1,10 @@
+/* Pour les écrans dont la résolution est comprise entre 1680px et 1920px */
+@media only screen and (min-width: 1680px) and (max-width: 1920px) {
+
+        body {
+        /* Modifie la couleur de fond */
+          background-color: #ffca4b;
+        }
+      
+}
+      
