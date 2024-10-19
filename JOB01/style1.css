@@ -1,4 +1,28 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        list-style: none;
+}
 body {
          /* Modifie la couleur de fond */
         background-color: #88c1d0;
+}
+a {
+        text-decoration: none;
+}
+nav {
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: pink;
+        padding: 10px 20px;
+        color: rgb(rgb(210, 200, 200), rgb(199, 217, 199), rgba(168, 168, 181, 0.848));
+
+}
+nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
 }

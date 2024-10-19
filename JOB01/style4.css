@@ -1,9 +1,104 @@
-/* Pour les écrans dont la résolution est inférieure à 1280px */
-@media only screen and (max-width: 1279px) {
-        /* Modifie la couleur de fond */
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        list-style: none;
+        text-decoration: none;
+      }
+      
+      body {
+        font-family: "Courier New", Courier, monospace;
+        background-color: blue;
+        min-height: 100vh;
+      }
+      
+      header {
+        height: 100vh;
+        width: 100%;
+      }
+      
+      .nav-bar {
+        padding: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: pink;
+      }
+      
+      .navbar .nav-links ul {
+        display: flex;
+      }
+      
+      .nav-links ul {
+        display: flex;
+      }
+      
+      .nav-links ul li {
+        margin: 0 25px;
+      }
+      
+      .nav-bar ul li.active a {
+        color: red;
+        font-weight: 700;
+      }
+      
+      .nav-bar .menu-hamburger {
+        display: none;
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        width: 35px;
+      }
+      
+      /* Media Queries pour les écrans inférieurs à 1280px */
+      @media screen and (max-width: 1279px) {
         body {
-         /* Modifie la couleur de fond */
           background-color: #ffffff;
         }
-}
+      }
+      
+      /* Media Queries pour le menu burger sur les écrans plus petits */
+      @media screen and (max-width: 767px) {
+        .nav-bar {
+          padding: 0;
+        }
+      
+        .nav-bar .menu-hamburger {
+          display: block; /* Affiche le menu burger uniquement pour les petits écrans */
+        }
+      
+        .nav-links {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: rgba(187, 119, 178, 0.947);
+          backdrop-filter: blur(20px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          transform: translateX(-100%); /* Cache le menu hors de l'écran */
+          transition: transform 0.3s ease-in-out; /* Transition fluide pour l'ouverture/fermeture */
+        } 
+      
+        /* Quand la classe mobile-menu est ajoutée, on affiche le menu */
+        .nav-links.mobile-menu {
+          transform: translateX(0); /* Fait glisser le menu à sa place */
+        }
+      
+        .nav-links ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .nav-links ul li {
+          margin: 25px 0;
+          font-size: 1.2em;
+        }
+      }
       
