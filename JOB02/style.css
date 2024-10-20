@@ -1,31 +1,107 @@
-*{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 body {
-        background-color: #88c1d0;
-    }
-    
-    /* ***************MEDIA QUERIES**************** */
-    
-    /* Pour les écrans dont la résolution est comprise entre 1280px et 1680px */
-    @media only screen and (min-width: 1280px) and (max-width: 1680px) {
-        body {
-            background-color: #ffca4b;
-        }
-    }
+  background-color: #88c1d0;
+}
+.nav-bar {
+  padding: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links ul li {
+  margin: 0 25px;
+}
+
+.nav-bar ul li.active a {
+  color: red;
+  font-weight: 700;
+}
+
+.nav-bar .menu-hamburger {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  width: 35px;
+}
+
+/* ***************MEDIA QUERIES**************** */
+
 /* Pour les écrans dont la résolution est comprise entre 1280px et 1680px */
 @media only screen and (min-width: 1280px) and (max-width: 1680px) {
-        body {
-                background-color: #275fa0;    
-        }
+  body {
+    background-color: #ffca4b;
+  }
+}
+/* Pour les écrans dont la résolution est comprise entre 1280px et 1680px */
+@media only screen and (min-width: 1280px) and (max-width: 1680px) {
+  body {
+    background-color: #275fa0;
+  }
 }
 /* Pour les écrans dont la résolution est inférieure à 1280px */
 @media only screen and (max-width: 1279px) {
-        body {
-                background-color: #ffffff;    
-        } 
+  body {
+    background-color: #ffffff;
+  }
 }
 
-    
+/* Media Queries pour le menu burger sur les écrans plus petits */
+@media screen and (max-width: 767px) {
+  .nav-bar {
+    padding: 0;
+  }
+
+  .nav-bar .menu-hamburger {
+    display: block; /* Affiche le menu burger uniquement pour les petits écrans */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(187, 119, 178, 0.947);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-100%); /* Cache le menu hors de l'écran */
+    transition: transform 0.3s ease-in-out; /* Transition fluide pour l'ouverture/fermeture */
+  }
+
+  /* Quand la classe mobile-menu est ajoutée, on affiche le menu */
+  .nav-links.mobile-menu {
+    transform: translateX(0); /* Fait glisser le menu à sa place */
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul li {
+    margin: 25px 0;
+    font-size: 1.2em;
+  }
+}
