@@ -7,6 +7,19 @@
         <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+        <nav class="nav-bar">
+                <div class="nav-links">
+                  <ul>
+                    <li class="active"><a href="#">Accueil</a></li>
+                    <li><a href="#">Présentation</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                  
+                </div>
+                <img src="./img/menu-btn.png" alt="menuburger" class="menu-hamburger" />
+              </nav>
+          
+
         <div class="flex-container">  
                 <div class="flex-items">1</div>
                 <div class="flex-items">2</div>
@@ -15,4 +28,13 @@
         </div> 
         
 </body>
+<script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+    
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+      </script>
+
 </html>
